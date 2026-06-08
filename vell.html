@@ -3,34 +3,14 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Will You Be My Valentine?</title>
-
-
-<audio autoplay loop>
-  <source src="CO2.mpeg" type="audio/mpeg">
-  Your browser does not support the audio element.
-</audio>
+<title>Will You Forgive Me?</title>
 
 <style>
-
 *{
     margin:0;
     padding:0;
     box-sizing:border-box;
     font-family:'Poppins',sans-serif;
-}
-h1{
-    margin:20px 0;
-    color:#ff4d6d;
-    font-style: italic;
-}
-
-.message{
-    display:none;
-    font-size:28px;
-    color:#ff1744;
-    margin-top:20px;
-    font-style:italic;
 }
 
 body{
@@ -42,7 +22,20 @@ body{
     overflow:hidden;
 }
 
-/* Floating Hearts */
+h1{
+    margin:20px 0;
+    color:#ff4d6d;
+    font-style:italic;
+}
+
+.message{
+    display:none;
+    font-size:26px;
+    color:#ff1744;
+    margin-top:20px;
+    font-style:italic;
+}
+
 .heart{
     position:absolute;
     color:#ff1744;
@@ -73,11 +66,6 @@ body{
     font-size:80px;
 }
 
-h1{
-    margin:20px 0;
-    color:#ff4d6d;
-}
-
 .buttons{
     margin-top:20px;
 }
@@ -106,23 +94,19 @@ button{
     background:#ddd;
     position:relative;
 }
-
-.message{
-    display:none;
-    font-size:26px;
-    color:#ff1744;
-    margin-top:20px;
-}
-
 </style>
 </head>
 
 <body>
 
-<!-- Hearts -->
+<audio autoplay loop>
+  <source src="CO2.mpeg" type="audio/mpeg">
+  Your browser does not support the audio element.
+</audio>
+
 <script>
 for(let i=0;i<30;i++){
-    let heart=document.createElement("div");
+    const heart=document.createElement("div");
     heart.innerHTML="❤";
     heart.classList.add("heart");
     heart.style.left=Math.random()*100+"vw";
@@ -135,7 +119,7 @@ for(let i=0;i<30;i++){
 
 <div class="teddy">🧸</div>
 
-<h1>DO YOU FORGIVE ME?❤️</h1>
+<h1>DO YOU FORGIVE ME? ❤️</h1>
 
 <div class="buttons">
     <button class="yes" onclick="showLove()">Yes 💖</button>
@@ -143,14 +127,12 @@ for(let i=0;i<30;i++){
 </div>
 
 <div class="message" id="loveMsg">
-    <div class="font-faimly italic"></div>
     Thank you 💞🤍
 </div>
 
 </div>
 
 <script>
-
 function showLove(){
     document.getElementById("loveMsg").style.display="block";
 }
@@ -161,7 +143,6 @@ function moveButton(){
     btn.style.top=Math.random()*80+"vh";
     btn.style.left=Math.random()*80+"vw";
 }
-
 </script>
 
 </body>
